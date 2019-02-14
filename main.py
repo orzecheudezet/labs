@@ -31,7 +31,7 @@ while wybor != 'q':
                 rent.rentABike()
                 i.dostepnosc = "0"
 
-        f = open("D:\\Szkolenie\\WypozyczalniaRowerow\\rowery.txt", "w")
+        f = open("rowery.txt", "w")
         for i in lR1:
             f.write(i.nrId + ";" + i.rama + ";" + i.kolor + ";" + i.rozmiar + ";" + i.cena + ";" + i.dostepnosc + "\n")
 

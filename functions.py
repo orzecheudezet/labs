@@ -12,7 +12,7 @@ def czyRowerJestDostepny(nrId):
 
 
 def getAllRents():
-    textFile = open("D:\\Szkolenie\\WypozyczalniaRowerow\\rent.txt", "r")
+    textFile = open("rent.txt", "r")
     calosc = textFile.read()
     a = calosc.splitlines()
     listWyn = []
@@ -30,9 +30,9 @@ def getAllRents():
     return listWyn
 
 def getReservationNumber():
-    textFile = open("D:\\Szkolenie\\WypozyczalniaRowerow\\rent.txt", "r")
+    textFile = open("rent.txt", "r")
 
-    if os.stat("D:\\Szkolenie\\WypozyczalniaRowerow\\rent.txt").st_size == 0:
+    if os.stat("rent.txt").st_size == 0:
         textFile.close()
         return 1
 

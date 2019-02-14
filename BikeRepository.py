@@ -5,7 +5,7 @@ class BikeRepository:
 
 
     def getAll(self):
-        textFile = open("D:\\Szkolenie\\WypozyczalniaRowerow\\rowery.txt", "r")
+        textFile = open("rowery.txt", "r")
         calosc = textFile.read()
         a = calosc.splitlines()
         listaRowerow = []
