@@ -1,0 +1,4 @@
+1;niebieski;meski;28;20;1
+2;czerwony;damski;26;16;1
+3;czarnt;meski;28;20;1
+4;srebrny;damski;26;16;1
