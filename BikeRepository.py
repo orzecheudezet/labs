@@ -35,7 +35,7 @@ class BikeRepository:
                         j.dostepnosc = "1"
                         cena = j.cena
 
-        f = open("D:\\Szkolenie\\WypozyczalniaRowerow\\rowery.txt", "w")
+        f = open("rowery.txt", "w")
 
         for i in listaRowerow:
             f.write(i.nrId + ";" + i.kolor + ";" + i.rama + ";" + i.rozmiar + ";" + i.cena + ";" + i.dostepnosc + "\n")
