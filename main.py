@@ -10,6 +10,7 @@ while wybor != 'q':
     print("2. Wypozycz rower.")
     print("3. Wyswietl wypozyczenia.")
     print("4. Oddaj rower.")
+    print("5. Pokaz Dluznikow")
     wybor = input()
     if wybor == '1':
         bR1 = BikeRepository()
@@ -48,6 +49,9 @@ while wybor != 'q':
         listaRowerow = BR.getAll()
         BR.returnBike(listaWyp, listaRowerow)
 
+    elif wybor =='5':
+        BR = BikeRepository()
+        BR.showDebtor()
 
 
 
