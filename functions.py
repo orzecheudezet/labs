@@ -24,8 +24,9 @@ def getAllRents():
         nrId = d[3]
         dataOd = d[4]
         dataDo = d[5]
-        czyOddany = d[6]
-        rent = Rent(nrRezerwacji, imie, nazwisko, nrId, dataOd, dataDo, czyOddany)
+        cena = d[6]
+        czyOddany = d[7]
+        rent = Rent(nrRezerwacji, imie, nazwisko, nrId, dataOd, dataDo, cena, czyOddany)
         listWyn.append(rent)
     textFile.close()
     return listWyn

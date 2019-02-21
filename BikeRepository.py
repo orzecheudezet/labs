@@ -64,7 +64,7 @@ class BikeRepository:
         for i in rents:
             terminOddania = stringToDate(i.dataDo)
             if terminOddania < dataTeraz and i.czyOddany == '0':
-                print(i.nrRezerwacji, i.imie, i.nazwisko, i.nrId, i.dataOd, i.dataDo)
+                print(i.nrRezerwacji, i.imie, i.nazwisko, i.nrId, i.dataOd, i.dataDo, i.cena)
 
 
 
