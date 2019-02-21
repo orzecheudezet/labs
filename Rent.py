@@ -2,18 +2,19 @@
 
 
 class Rent:
-    def __init__(self,nrRezerwacji ,imie, nazwisko, nrId, dataOd, dataDo):
+    def __init__(self,nrRezerwacji ,imie, nazwisko, nrId, dataOd, dataDo, czyOddany):
         self.nrRezerwacji = nrRezerwacji
         self.imie = imie
         self.nazwisko = nazwisko
         self.nrId = nrId
         self.dataOd = dataOd
         self.dataDo = dataDo
+        self.czyOddany =czyOddany
 
     def rentABike(self):
         f = open("rent.txt", "a")
         f.write(str(self.nrRezerwacji) + ";" + self.imie + ";" + self.nazwisko + ";" + self.nrId + ";"
-                + self.dataOd + ";" + self.dataDo + "\n")
+                + self.dataOd + ";" + self.dataDo + ";"+ self.czyOddany + "\n")
         self.nrRezerwacji += 1
         f.close()
 
@@ -29,6 +30,7 @@ class Rent:
             nrId = d[3]
             dataOd = d[4]
             dataDo = d[5]
-            rent = Rent(nrRezerwacji, imie, nazwisko, nrId, dataOd, dataDo)
+            czyOddany = d[6]
+            rent = Rent(nrRezerwacji, imie, nazwisko, nrId, dataOd, dataDo, czyOddany)
         textFile.close()
         return rent

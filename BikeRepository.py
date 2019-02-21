@@ -32,7 +32,7 @@ class BikeRepository:
                 dataOd = stringToDate(i.dataOd)
                 dataDo = stringToDate(i.dataDo)
                 dateDelta = (dataDo - dataOd).days
-                listaWyp.remove(i)
+                i.czyOddany = '1'
                 for j in listaRowerow:
                     if i.nrId == j.nrId:
                         j.dostepnosc = "1"
@@ -47,7 +47,7 @@ class BikeRepository:
         f1 = open("rent.txt", "w")
         for i in listaWyp:
             f1.write(i.nrRezerwacji + ";" + i.imie + ";" + i.nazwisko + ";" + i.nrId + ";"
-                    + i.dataOd + ";" + i.dataDo + "\n")
+                    + i.dataOd + ";" + i.dataDo + ";" + i.czyOddany + "\n")
 
         f1.close()
 
@@ -63,7 +63,7 @@ class BikeRepository:
         rents = getAllRents()
         for i in rents:
             terminOddania = stringToDate(i.dataDo)
-            if terminOddania < dataTeraz:
+            if terminOddania < dataTeraz and i.czyOddany == '0':
                 print(i.nrRezerwacji, i.imie, i.nazwisko, i.nrId, i.dataOd, i.dataDo)
 
 

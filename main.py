@@ -26,7 +26,8 @@ while wybor != 'q':
         nrId = input("Podaj nrId roweru.")
         dataOd = input("Podaj date wypozyczenia.")
         dataDo = input("Podaj date zwrotu.")
-        rent = Rent(nrRezerwcji, imie, nazwisko, nrId, dataOd, dataDo)
+        czyOddany = '0'
+        rent = Rent(nrRezerwcji, imie, nazwisko, nrId, dataOd, dataDo, czyOddany)
         for i in lR1:
             if i.nrId == nrId and i.dostepnosc == "1":
                 rent.rentABike()
@@ -41,7 +42,7 @@ while wybor != 'q':
     elif wybor == '3':
         rents = getAllRents()
         for i in rents:
-            print(i.nrRezerwacji, i.imie, i.nazwisko, i.nrId, i.dataOd, i.dataDo)
+            print(i.nrRezerwacji, i.imie, i.nazwisko, i.nrId, i.dataOd, i.dataDo, i.czyOddany)
 
     elif wybor == '4':
         listaWyp = getAllRents()
