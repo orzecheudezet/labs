@@ -47,7 +47,7 @@ class BikeRepository:
         f1 = open("rent.txt", "w")
         for i in listaWyp:
             f1.write(i.nrRezerwacji + ";" + i.imie + ";" + i.nazwisko + ";" + i.nrId + ";"
-                    + i.dataOd + ";" + i.dataDo + ";" + i.czyOddany + "\n")
+                    + i.dataOd + ";" + i.dataDo + ";" + i.cena + ";" + i.czyOddany + "\n")
 
         f1.close()
 
