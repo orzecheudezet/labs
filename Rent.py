@@ -10,7 +10,7 @@ class Rent:
         self.dataOd = dataOd
         self.dataDo = dataDo
         self.cena = cena
-        self.czyOddany =czyOddany
+        self.czyOddany = czyOddany
 
     def rentABike(self):
         f = open("rent.txt", "a")

@@ -26,6 +26,8 @@ class BikeRepository:
         return listaRowerow
 
     def returnBike(self, listaWyp, listaRowerow):
+        cena = None
+        dateDelta = None
         idWyp = input("Podaj nr rezerwacji.")
         for i in listaWyp:
             if idWyp == i.nrRezerwacji:
@@ -53,8 +55,13 @@ class BikeRepository:
 
         doZaplaty = dateDelta * int(cena)
         print(str(doZaplaty) + 'zl')
-        listaWplat = []
-        listaWplat.append(doZaplaty)
+
+        f3 = open("raport.txt", "a")
+        for i in listaWyp:
+            if idWyp == i.nrRezerwacji:
+                f3.write(i.nrRezerwacji + ";" + i.imie + ";" + i.nazwisko + ";" + i.nrId + ";"
+                     + i.dataOd + ";" + i.dataDo + ";" + i.cena + ";" + i.czyOddany + ";" + str(doZaplaty) +  "\n")
+
 
 
     def showDebtor(self):

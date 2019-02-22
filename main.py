@@ -2,7 +2,6 @@ from BikeRepository import *
 from Rent import *
 from functions import *
 
-
 print("Witmy w wypozyczalni rowerow.")
 wybor = None
 while wybor != 'q':
