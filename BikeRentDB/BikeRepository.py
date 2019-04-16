@@ -1,5 +1,9 @@
 class BikeRepository:
     def __init__(self, cursor):
+        self.Curosr = cursor
 
-    def connect(self):
+
+     def save(self, bike):
+
+
 
