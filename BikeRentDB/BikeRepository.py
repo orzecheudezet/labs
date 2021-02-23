@@ -2,11 +2,11 @@
 
 class BikeRepository:
     def __init__(self, cursor):
-        self.Cursor = cursor
+        self.cursor = cursor
 
 
     def save(self, bike):
-        self.Cursor.execute("INSERT INTO Bikes (Color, Size, Brand) VALUES('"+bike.Color+"', '"+bike.Size+"', '"+bike.Brand+"')")
+        self.cursor.execute("INSERT INTO Bikes (Color, Size, Brand) VALUES('"+bike.color+"', '"+str(bike.size)+"', '"+bike.brand+"')")
 
 
 

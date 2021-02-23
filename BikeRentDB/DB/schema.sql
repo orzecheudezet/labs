@@ -8,5 +8,4 @@ Color varchar(50) NOT NULL,
 Size int NOT NULL,
 Brand varchar(50) NOT NULL);
 
-INSERT INTO Bikes (Id, Color, Size, Brand)
-VALUES()
+SELECT * FROM Bikes
